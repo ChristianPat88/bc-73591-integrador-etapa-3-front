@@ -1,0 +1,82 @@
+/* ----------------------------------------------- */
+/* HEADER                                          */
+/* ----------------------------------------------- */
+/* MOBILE FIRST */
+
+.main-header{
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media screen and (min-width: 992px) {
+        & {
+            flex-direction: column;
+        }
+    }
+}
+
+#menu{
+    
+    display: none;
+
+    /* Hacer funcionar el checkbox -> Hacer funcionar el menu hamburguesa */
+
+    &:checked + .nav-bar{
+        display: block;
+    }
+
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors */
+    &:checked ~ .search-bar .menu-toogle .menu-toogle__label{
+        background-color: rgb(216, 215, 215);
+    }
+}
+
+
+
+
+/* ----------------------------------------------- */
+/* MENU TOOGLE                                     */
+/* ----------------------------------------------- */
+
+.menu-toogle{
+    display: block;
+    flex: 0 0 3rem;
+    position: relative;
+
+    cursor: pointer;
+
+    &__label{ /* .menu-toogle__label */
+        display: block;
+        height: 100%;
+    }
+
+    &__top-bread, /* .menu-toogle__top-bread */
+    &__meat, /* .menu-toogle__top-bread */
+    &__bottom-bread { /* .menu-toogle__top-bread */
+        display: block;
+        background-color: #303030;
+        height: .2rem;
+        position: absolute;
+        left: .5rem;
+        right: .5rem;
+        
+    }
+
+    &__top-bread{
+        top: .9rem;
+    }
+
+    &__meat{ /* centrar sin usar flexbox */
+        top: 50%; /* centrando verticalmente */
+        margin-top: -.1rem;
+    }
+
+    &__bottom-bread{
+        bottom: .9rem;
+    }
+
+    @media  screen and (min-width: 992px) {
+        & { /* .menu-toogle */
+            display: none;
+        }
+    }
+}

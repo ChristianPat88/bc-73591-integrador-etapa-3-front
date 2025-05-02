@@ -1,0 +1,101 @@
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-contact {
+    background-color: #f1f2f3;
+    padding: 1rem;
+}
+
+.section-container {
+    padding: 1rem;
+
+    &__info {
+        &>ul {
+            margin-top: 1rem;
+            padding-left: 1rem;
+        }
+    }
+
+
+
+
+    &__form {
+        margin-top: 2rem;
+    }
+
+    &__form-fieldset {
+        background-color: #f1f2f3;
+        border-style: hidden;
+        border-radius: 5px;
+        padding: 1rem;
+        text-align: center;
+
+        &>legend {
+            background-color: #f1f2f3;
+            border-radius: 5px;
+            padding: 7px;
+            font-weight: 700;
+        }
+
+        @media screen and (min-width: 992px) {
+            & {
+                text-align: start;
+
+            }
+
+
+        }
+    }
+
+    &__form-bloque {
+        display: block;
+        margin: 10px;
+
+        @media screen and (min-width: 992px) {
+            & {
+                display: inline-block;
+                width: 5rem;
+            }
+        }
+    }
+
+    &__form-inp-caja {
+        width: 70%;
+        margin-bottom: 5px;
+        padding: 5px;
+        resize: none;
+
+    }
+
+    &__form-bottons {
+        display: flex;
+        justify-content: center;
+
+        &>button {
+            font-size: 1.5rem;
+            border-radius: 5px;
+            padding: 5px;
+
+            &:hover {
+                cursor: pointer;
+                outline: 3px solid #6d6f70;
+            }
+        }
+
+
+
+        &>.bot-send {
+            margin-right: 5px;
+        }
+
+        &>.bot-clean {
+            margin-left: 5px;
+        }
+    }
+
+
+}

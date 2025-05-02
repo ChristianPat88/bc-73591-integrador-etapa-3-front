@@ -1,0 +1,171 @@
+.card {
+    background-color: #f1f2f3;
+    min-width: 400px;
+    max-width: 500px;
+    height: 300px;
+
+    margin-top: 1rem;
+
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
+
+    transition: transform .2s;
+    /* ! No puede ser all */
+
+    &:hover,
+    &:focus {
+        /* radianes 2pi, gradianes 400, decimles 360 grados, vueltas 1turn  */
+        transform: scale(1.03) skew(0deg) rotate(2deg);
+        transform-origin: bottom;
+        box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.5);
+    }
+
+    &__article {
+        display: flex;
+
+    }
+
+    &__image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    &__image-container {
+        height: 300px;
+        overflow: hidden;
+        /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
+        /* Estado inicial */
+    }
+
+
+    &:focus,
+    &:hover {
+        height: 600px;
+    }
+
+    &:hover &__article,
+    &:focus &__article {
+        flex-direction: column;
+    }
+
+    &:hover &__image-container,
+    &:focus &__image-container {
+        /* clip-path: polygon(0 0, 100% 0, 99% 100%, 0% 100%); */
+        /* Estado final */
+        width: 100%;
+        height: 100%;
+
+    }
+
+    &:hover &__content-container,
+    &:focus &__content-container {
+        &>h2 {
+            display: none;
+        }
+
+        &>div>p {
+            display: none;
+        }
+
+        &>div>div {
+            display: block;
+        }
+    }
+
+    &__content-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 5px;
+
+    }
+
+    &__heading {
+        margin-bottom: 5px;
+    }
+
+    &__description {
+        margin-top: 5px;
+    }
+
+    &__buttons {
+        text-align: center;
+        display: none;
+    }
+
+    &:hover &__buttons,
+    &:focus &__buttons {
+        margin-top: 1rem;
+
+        &>button {
+            font-size: 2rem;
+            padding: 2px 10px;
+
+            &:hover,
+            &:focus {
+                border: 3px solid;
+            }
+        }
+    }
+
+    &__buttons>button {
+        /* margin-top: 4px; */
+        background-color: rgb(216, 215, 215);
+        border: 1px solid;
+        border-radius: 30px;
+        padding: 2px 5px;
+
+        &:nth-child(1) {
+            margin-right: 2px;
+        }
+
+        &:nth-child(2) {
+            margin-left: 2px;
+        }
+    }
+
+
+    /* Responsive -> 992px */
+
+    @media screen and (min-width: 992px) {
+        & {
+            /* .card */
+            min-width: 400px;
+            max-width: 500px;
+            height: 400px;
+        }
+
+        &__article {
+            /* .card__article */
+            flex-direction: column;
+        }
+
+        &:focus,
+        &:hover {
+            height: 600px;
+        }
+
+        &:hover &__content-container,
+        &:focus &__content-container {
+            display: block;
+        }
+
+        &:hover &__image-container,
+        &:focus &__image-container {
+            width: 100%;
+        }
+
+        &__content-container {
+            text-align: center;
+        }
+
+        &__heading {
+            margin-top: 8px;
+        }
+
+
+    }
+}

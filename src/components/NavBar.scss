@@ -1,0 +1,65 @@
+/* ----------------------------------------------- */
+/* NAVBAR                                          */
+/* ----------------------------------------------- */
+
+.nav-bar{
+    background-color: rgb(216, 215, 215);
+    display: none;
+
+    &__nav-list{ /* .nav-bar__nav-list */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        list-style-type: none;
+
+        @media screen and (min-width: 992px) {
+            & {
+                flex-direction: row;
+            } 
+        }
+    }
+
+
+    &__nav-item{ /* .nav-bar__nav-item */
+        text-align: center;
+        background-color: rgb(216, 215, 215);
+        border-bottom: 1px solid black;
+
+        @media screen and (min-width: 992px) {
+            & {
+                border: 2px solid rgb(216, 215, 215);
+                border-radius: 30px;
+                margin-left: 3px;
+                margin-right: 3px;
+            } 
+        }
+    }
+    &__nav-item:first-child{
+        border-top: 1px solid black;
+
+        @media screen and (min-width: 992px){
+            & {
+                border-top: 1px solid rgb(216, 215, 215);
+            }
+        }
+    }
+
+
+    &__nav-link{
+        display: block;
+        padding: 1rem 2rem;
+        color: black;
+        text-decoration: none;
+        
+    }
+
+
+    @media screen and (min-width: 992px){
+        & {
+            display: block;
+            background-color: white;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    }
+}

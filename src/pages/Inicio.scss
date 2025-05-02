@@ -1,0 +1,16 @@
+.section-cards{
+    background-color: #f1f2f3;
+    padding: 1rem;
+
+    &__header>h1{
+        font-variant-caps: small-caps;
+        font-size: 2rem;
+    }
+}
+
+.cards-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
+}

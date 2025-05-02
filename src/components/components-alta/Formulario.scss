@@ -1,0 +1,75 @@
+.alta-container {
+    &__subtitle {
+        padding-bottom: 1rem;
+    }
+
+    &__form {
+        background-color: #f1f2f3;
+        padding: 5px;
+        border-radius: 15px;
+        text-align: center;
+
+        @media screen and (min-width: 992px) {
+            & {
+                text-align: start;
+
+            }
+        }
+
+    }
+
+    &__label {
+        display: block;
+        margin: 10px;
+
+        &-envio {
+            display: inline-block;
+        }
+
+        @media screen and (min-width: 992px) {
+            & {
+                display: inline-block;
+                width: 6rem;
+            }
+        }
+    }
+
+    &__input {
+        width: 70%;
+        padding: 5px;
+
+        &-envio {
+            width: 13px;
+        }
+    }
+
+    &__buttons {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+
+        &>button {
+            font-size: 1rem;
+            border-radius: 5px;
+            padding: 5px;
+
+            &:hover {
+                cursor: pointer;
+                outline: 3px solid #6d6f70;
+            }
+        }
+
+        &>.bot-send {
+            margin-right: 5px;
+        }
+
+        &>.bot-clean {
+            margin-left: 5px;
+        }
+
+
+    }
+
+
+}

@@ -1,0 +1,72 @@
+.carrito-container {
+    &__divcontain {
+        overflow-x: auto;
+    }
+
+    &__table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 100%;
+        margin: 1rem auto;
+
+        thead {
+            background-color: #f1f2f3;
+        }
+
+        tr:nth-child(2n) {
+            background-color: #f1f2f3;
+        }
+
+        th,td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+
+            @media screen and (min-width: 992px) {
+                & {
+                    text-align: center;
+                }
+            }
+        }
+        
+        td.no-product{
+            text-align: center;
+        }
+
+    }
+
+    &>p {
+        margin-top: 1rem;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    &__buttons {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        
+        &>button {
+            font-size: 1.5rem;
+            border-radius: 5px;
+            padding: 5px;
+
+            &:hover {
+                cursor: pointer;
+                outline: 3px solid #6d6f70;
+            }
+        }
+
+
+
+        &>.bot-clean {
+            margin-right: 5px;
+        }
+
+        &>.bot-buy {
+            margin-left: 5px;
+        }
+    }
+
+
+}

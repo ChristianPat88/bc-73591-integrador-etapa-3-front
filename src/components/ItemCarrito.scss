@@ -1,0 +1,23 @@
+.carrito-container {
+    &__image {
+        width: 50px;
+    }
+
+    &__table-buttons {
+        text-align: center;
+
+        &>button {
+            width: 4rem;
+            margin: 1px;
+            padding: 2px 1px;
+
+            &:hover {
+                cursor: pointer;
+                outline: 3px solid #6d6f70;
+            }
+        }
+
+
+    }
+
+}

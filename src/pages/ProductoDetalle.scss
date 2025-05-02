@@ -1,0 +1,32 @@
+.section-detail {
+    background-color: #f1f2f3;
+    padding: 1rem;
+
+    &>h2{
+        text-align: center;
+    }
+}
+
+.detail-container {
+    padding: 1rem;
+
+    &>h2{
+        margin-bottom: 10px;
+        padding: 3px;
+        background-color: #f1f2f3;
+        border-radius: 5px;
+    }
+
+    &__img {
+        margin-top: 1rem;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.no-selected{
+    margin-top: 1rem;
+    text-align: center;
+}
