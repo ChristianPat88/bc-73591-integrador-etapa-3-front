@@ -1,6 +1,7 @@
 import './Formulario.scss'
 import { useContext, useEffect, useState } from "react"
 import ProductosContext from "../../contexts/ProductosContext"
+import DragDrop from './DragDrop'
 
 const Formulario = () => {
 
@@ -23,6 +24,10 @@ const Formulario = () => {
 
 
     const [form, setForm] = useState(formInicial)
+
+    /* Creamos 2 estados para gestionar el drag and drop */
+    const [foto, setFoto] = useState('')
+    const [srcImagenBack, setSrcImagenBack] = useState('')
 
 
     const handleSubmit = (e) => {
@@ -101,6 +106,14 @@ const Formulario = () => {
                         name="descripcion"
                         value={form.descripcion}
                         onChange={handleChange} />
+                </div>
+
+                <div>
+                    <DragDrop
+                        setFoto={setFoto}
+                        srcImagenBack={srcImagenBack}
+                        setSrcImagenBack={setSrcImagenBack}
+                    />
                 </div>
 
                 <div>

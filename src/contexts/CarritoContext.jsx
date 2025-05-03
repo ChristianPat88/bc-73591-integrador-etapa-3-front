@@ -52,7 +52,6 @@ const CarritoProvider = ({ children }) => {
         try {
 
             const dataCarrito = {
-                createAt: Date.now(),
                 carrito
             }
 
@@ -61,7 +60,7 @@ const CarritoProvider = ({ children }) => {
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(dataCarrito)
             }
-
+            
             const carritoGuardado = await peticionesHttp(urlCarrito, options)
 
             limpiarCarrito()
