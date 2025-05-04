@@ -25,7 +25,7 @@ const Formulario = () => {
 
     const [form, setForm] = useState(formInicial)
 
-    const imageNotFound = 'http://localhost:8080/uploads/image-not-found.webp'
+    const imageNotFound = import.meta.env.VITE_BACKEND_IMAGES + 'image-not-found.webp'
     /* Creamos 2 estados para gestionar el drag and drop */
     const [foto, setFoto] = useState({ foto: imageNotFound })
     const [srcImagenBack, setSrcImagenBack] = useState(imageNotFound)
