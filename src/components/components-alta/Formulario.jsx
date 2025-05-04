@@ -26,17 +26,19 @@ const Formulario = () => {
     const [form, setForm] = useState(formInicial)
 
     /* Creamos 2 estados para gestionar el drag and drop */
-    const [foto, setFoto] = useState('')
-    const [srcImagenBack, setSrcImagenBack] = useState('')
+    const [foto, setFoto] = useState('http://localhost:8080/uploads/image-not-found.webp')
+    const [srcImagenBack, setSrcImagenBack] = useState('http://localhost:8080/uploads/image-not-found.webp')
 
 
     const handleSubmit = (e) => {
         e.preventDefault()
 
         if (form.id === null) {
-            crearProductoContext(form)
+            const productoNuevoConImagen = { ...form, ...foto }
+            crearProductoContext(productoNuevoConImagen)
         } else {
-            actualizarProductoContext(form)
+            const productoNuevoConImagen = { ...form, ...foto }
+            actualizarProductoContext(productoNuevoConImagen)
             setProductoAEditar(null)
         }
 
