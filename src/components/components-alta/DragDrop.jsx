@@ -16,8 +16,9 @@ const DragDrop = ({ setFoto, srcImagenBack, setSrcImagenBack }) => {
         handleFiles(files)
     }
 
-    const handleChange = () => {
-
+    const handleChange = (e) => {
+        const files = e.target.files
+        handleFiles(files)
     }
 
     const handleFiles = async (files) => {

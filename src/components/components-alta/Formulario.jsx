@@ -25,9 +25,10 @@ const Formulario = () => {
 
     const [form, setForm] = useState(formInicial)
 
+    const imageNotFound = 'http://localhost:8080/uploads/image-not-found.webp'
     /* Creamos 2 estados para gestionar el drag and drop */
-    const [foto, setFoto] = useState('http://localhost:8080/uploads/image-not-found.webp')
-    const [srcImagenBack, setSrcImagenBack] = useState('http://localhost:8080/uploads/image-not-found.webp')
+    const [foto, setFoto] = useState({ foto: imageNotFound })
+    const [srcImagenBack, setSrcImagenBack] = useState(imageNotFound)
 
 
     const handleSubmit = (e) => {
@@ -62,6 +63,9 @@ const Formulario = () => {
     const handleReset = () => {
         setForm(formInicial)
         setProductoAEditar(null)
+        setFoto({ foto: imageNotFound })
+        setSrcImagenBack(imageNotFound)
+
     }
 
     return (
@@ -118,7 +122,7 @@ const Formulario = () => {
                     />
                 </div>
 
-                <div>
+                {/*                 <div>
                     <label className="alta-container__label" htmlFor="lbl-foto">Foto:</label>
                     <input className="alta-container__input"
                         type="text"
@@ -127,7 +131,7 @@ const Formulario = () => {
                         value={form.foto}
 
                         onChange={handleChange} />
-                </div>
+                </div> */}
 
                 <div>
                     <label className="alta-container__label alta-container__label-envio" htmlFor="lbl-envio">Envío</label>
