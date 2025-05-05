@@ -2,11 +2,15 @@
     border: 2px dashed #ccc;
     border-radius: 20px;
     width: 300px;
-    margin: 25px 0;
-    padding: 20px;
+    padding: 10px;
+    margin: 15px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     & p {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     &-button {
@@ -15,7 +19,11 @@
         background: #ccc;
         cursor: pointer;
         border-radius: 5px;
-        border-radius: 1px solid #ccc;
+        border: 1px solid;
+
+        &:hover {
+            outline: 3px solid #6d6f70;
+        }
     }
 
     & #lbl-foto {
@@ -25,7 +33,13 @@
     &-image img {
         width: 150px;
         margin-top: 10px;
-        margin-right: 10px;
         vertical-align: middle;
     }
+
+    @media screen and (min-width: 992px) {
+        & {
+            margin: 10px;
+        }
+    }
+
 }

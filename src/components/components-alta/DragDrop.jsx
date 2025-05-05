@@ -64,14 +64,14 @@ const DragDrop = ({ setFoto, srcImagenBack, setSrcImagenBack }) => {
     }
 
     return (
-        <div className='drop-area' onDrop={handleDrop}>
+        <div className='alta-container__label drop-area' onDrop={handleDrop}>
             <p>
-                Subir imagen al servidor con <b>File Dialog</b> o con
-                <b>drag and drop</b> dentro del area punteada.
+                Arrastra y solta tu imagen dentro del área punteada o usa
+                la opción <b>Buscar Imagen</b>
             </p>
             <input type="file" id="lbl-foto" accept="image/*" onChange={handleChange} />
             <label className="drop-area-button" htmlFor="lbl-foto">
-                File Dialog
+                Buscar Imagen
             </label>
             <div className='drop-area-image'>
                 <img src={srcImagenBack} alt="" />

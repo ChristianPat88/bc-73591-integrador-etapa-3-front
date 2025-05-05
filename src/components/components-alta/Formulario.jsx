@@ -44,7 +44,8 @@ const Formulario = () => {
         }
 
         setForm(formInicial)
-
+        setFoto({ foto: imageNotFound })
+        setSrcImagenBack(imageNotFound)
     }
 
     const handleChange = (e) => {
