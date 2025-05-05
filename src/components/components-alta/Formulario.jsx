@@ -19,7 +19,15 @@ const Formulario = () => {
 
 
     useEffect(() => {
-        productoAEditar ? setForm(productoAEditar) : setForm(formInicial)
+        //productoAEditar ? setForm(productoAEditar) : setForm(formInicial)
+        if (productoAEditar) {
+            setForm(productoAEditar)
+            setFoto({ foto: productoAEditar.foto })
+            setSrcImagenBack(productoAEditar.foto)
+        } else {
+            setForm(formInicial)
+        }
+
     }, [productoAEditar])
 
 

@@ -44,7 +44,7 @@ const TablaFila = ({ producto }) => {
             <td>{producto.stock}</td>
             <td>{producto.descripcion}</td>
             <td>
-                <img className="alta-container__image" src={producto.foto ? producto.foto : "imgs/image-not-found.webp"} alt={producto.nombre} />
+                <img className="alta-container__image" src={producto.foto} alt={producto.nombre} />
             </td>
             <td>{producto.envio ? 'SI' : 'NO'}</td>
             <td>
