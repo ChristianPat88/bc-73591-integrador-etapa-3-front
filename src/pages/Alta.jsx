@@ -13,7 +13,7 @@ const Alta = () => {
       <section className="section-alta">
         <header className="section-alta__header">
           <h1>Formulario de alta de productos</h1>
-          <p>Acá podés ingresar productos</p>
+          <p>Acá podés ingresar productos <b>( * campo obligatorio )</b></p>
         </header>
       </section>
 

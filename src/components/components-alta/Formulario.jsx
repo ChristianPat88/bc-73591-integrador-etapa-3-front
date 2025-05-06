@@ -82,34 +82,37 @@ const Formulario = () => {
             <h2 className="alta-container__subtitle">{form.id ? "Editar" : "Guardar"}</h2>
             <form className="alta-container__form" onSubmit={handleSubmit}>
                 <div>
-                    <label className="alta-container__label" htmlFor="lbl-nombre">Nombre:</label>
+                    <label className="alta-container__label" htmlFor="lbl-nombre">Nombre: *</label>
                     <input className="alta-container__input"
                         type="text"
                         id="lbl-nombre"
                         name="nombre"
                         value={form.nombre}
+                        required
                         onChange={handleChange} />
                 </div>
 
                 <div>
-                    <label className="alta-container__label" htmlFor="lbl-precio">Precio:</label>
+                    <label className="alta-container__label" htmlFor="lbl-precio">Precio: *</label>
                     <input className="alta-container__input"
                         type="number"
                         min={0}
                         id="lbl-precio"
                         name="precio"
                         value={form.precio}
+                        required
                         onChange={handleChange} />
                 </div>
 
                 <div>
-                    <label className="alta-container__label" htmlFor="lbl-stock">Stock:</label>
+                    <label className="alta-container__label" htmlFor="lbl-stock">Stock: *</label>
                     <input className="alta-container__input"
                         type="number"
                         min={0}
                         id="lbl-stock"
                         name="stock"
                         value={form.stock}
+                        required
                         onChange={handleChange} />
                 </div>
 
